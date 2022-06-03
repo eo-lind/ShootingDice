@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+//    TAUNT: "Go away or I shall taunt you a second time!"
 
 namespace ShootingDice
 {
