@@ -2,11 +2,14 @@ using System;
 
 namespace ShootingDice
 {
-    // TODO: Complete this class
-
     // A player who prompts the user to enter a number for a roll
     public class HumanPlayer : Player
     {
+
+        public HumanPlayer(string name)
+        {
+            Name = name;
+        }
         public override void Play(Player other)
         {
         // Call roll for "this" object and for the "other" object

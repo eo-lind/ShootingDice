@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-//    TAUNT: "Go away or I shall taunt you a second time!"
 
 namespace ShootingDice
 {
@@ -9,7 +8,13 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
-            SmackTalkingPlayer smackTalkingPlayer = new SmackTalkingPlayer("Go away or I shall taunt you a second time!");
+            SmackTalkingPlayer smackTalkingPlayer = new SmackTalkingPlayer("Olivia", "Go away or I shall taunt you a second time!");
+            OneHigherPlayer oneHigherPlayer = new OneHigherPlayer("Pepper"); 
+            HumanPlayer humanPlayer = new HumanPlayer("Human Who is Totally Not a Robot");
+            CreativeSmackTalkingPlayer creativeSmackTalkingPlayer = new CreativeSmackTalkingPlayer("Rupert");
+            SoreLoserPlayer soreLoserPlayer = new SoreLoserPlayer("Bev");
+            UpperHalfPlayer upperHalfPlayer = new UpperHalfPlayer("Bosco");
+            SoreLoserUpperHalfPlayer soreLoserUpperHalfPlayer = new SoreLoserUpperHalfPlayer("Bogie");
 
             Player player1 = new Player();
             player1.Name = "Bob";
@@ -36,6 +41,7 @@ namespace ShootingDice
             Console.WriteLine("-------------------");
 
             List<Player> players = new List<Player>() {
+                smackTalkingPlayer, oneHigherPlayer, humanPlayer, creativeSmackTalkingPlayer, soreLoserPlayer, upperHalfPlayer, soreLoserUpperHalfPlayer,
                 player1, player2, player3, large
             };
 

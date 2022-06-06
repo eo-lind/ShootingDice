@@ -7,8 +7,9 @@ namespace ShootingDice
     {
         public string Taunt { get; }
 
-        public SmackTalkingPlayer(string taunt)
+        public SmackTalkingPlayer(string name, string taunt)
         {
+            Name = name;
             Taunt = taunt;
         }
 

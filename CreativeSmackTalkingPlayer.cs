@@ -13,23 +13,23 @@ namespace ShootingDice
             Name = name;
         }
 
-        // public override int Roll()
-        // {
-        //     // construct taunt list
-        //     List<string> taunts = new List<string>();
+        public override int Roll()
+        {
+            // construct taunt list
+            List<string> taunts = new List<string>();
 
-        //     // taunts
-        //     taunts.Add("I don't want to talk to you anymore, you empty-headed animal food trough whopper.");
-        //     taunts.Add("I fart in your general direction.");
-        //     taunts.Add("Your mother was a hamster and your father smelt of elderberries!");
+            // taunts
+            taunts.Add("I don't want to talk to you anymore, you empty-headed animal food trough whopper.");
+            taunts.Add("I fart in your general direction.");
+            taunts.Add("Your mother was a hamster and your father smelt of elderberries!");
 
-        //     // pick a taunt
-        //     int randomNum = new Random();
-        //     int tauntIndex = randomNum.Next(0, taunts.Count);
-        //     Console.WriteLine(taunts[tauntIndex])
+            // pick a taunt
+            Random randomNum = new Random();
+            int tauntIndex = randomNum.Next(0, taunts.Count);
+            Console.WriteLine(taunts[tauntIndex]);
 
-        //     // get roll #
-        //     return new Random().Next(DiceSize) + 1; 
-        // }
+            // get roll #
+            return new Random().Next(DiceSize) + 1; 
+        }
     }
 }

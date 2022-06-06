@@ -2,12 +2,14 @@ using System;
 
 namespace ShootingDice
 {
-    // TODO: Complete this class
-
     // A Player that throws an exception when they lose to the other player
     // Where might you catch this exception????
     public class SoreLoserPlayer : Player
     {
+        public SoreLoserPlayer(string name)
+        {
+            Name = name;
+        }
         public override void Play(Player other)
         {
             // Call roll for "this" object and for the "other" object
@@ -16,14 +18,22 @@ namespace ShootingDice
 
             Console.WriteLine($"{Name} rolls a {myRoll}");
             Console.WriteLine($"{other.Name} rolls a {otherRoll}");
+
             if (myRoll > otherRoll)
             {
                 Console.WriteLine($"{Name} Wins!");
             }
             else if (myRoll < otherRoll)
             {
-                // TODO: exception here
-                Console.WriteLine($"{other.Name} Wins!");
+               try
+               {
+                   otherRoll = 0;
+               }
+               catch(Exception)
+               {
+                    Console.WriteLine($"{other.Name} Wins!");
+               }
+              
             }
             else
             {
