@@ -17,27 +17,28 @@ namespace ShootingDice
             Console.WriteLine($"{Name} rolls a {myRoll}");
             Console.WriteLine($"{other.Name} rolls a {otherRoll}");
 
-            if (myRoll > otherRoll)
+            try
             {
-                Console.WriteLine($"{Name} Wins!");
+                if (myRoll > otherRoll)
+                {
+                    Console.WriteLine($"{Name} Wins!");
+                }
+                else if (myRoll < otherRoll)
+                {
+                    // *not sure this is right
+                    throw new NotImplementedException();
+
+                }
+                else
+                {
+                    Console.WriteLine("It's a tie");
+                }
             }
-            else if (myRoll < otherRoll)
+            catch
             {
-                // *not sure this is right
-               try
-               {
-                   otherRoll = otherRoll * 1;
-               }
-               catch(Exception)
-               {
-                    Console.WriteLine($"{other.Name} Wins!");
-               }
-              
+                Console.WriteLine("Bev is being a sore loser!");
             }
-            else
-            {
-                Console.WriteLine("It's a tie");
-            }
+            
         }
     }
 }
