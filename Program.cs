@@ -9,6 +9,8 @@ namespace ShootingDice
     {
         static void Main(string[] args)
         {
+            SmackTalkingPlayer smackTalkingPlayer = new SmackTalkingPlayer("Go away or I shall taunt you a second time!");
+
             Player player1 = new Player();
             player1.Name = "Bob";
 
