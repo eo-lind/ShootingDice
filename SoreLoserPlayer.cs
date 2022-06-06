@@ -8,7 +8,7 @@ namespace ShootingDice
     // Where might you catch this exception????
     public class SoreLoserPlayer : Player
     {
-        public override void Playl(Player other)
+        public override void Play(Player other)
         {
             // Call roll for "this" object and for the "other" object
             int myRoll = Roll();
