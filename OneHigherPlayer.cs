@@ -13,8 +13,8 @@ namespace ShootingDice
         public override void Play(Player other)
         {
             // Call roll for "this" object and for the "other" object
+            int otherRoll = other.Roll();
             int myRoll = other.Roll() + 1;
-            int otherRoll = Roll();
 
             Console.WriteLine($"{Name} rolls a {myRoll}");
             Console.WriteLine($"{other.Name} rolls a {otherRoll}");
