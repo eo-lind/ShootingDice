@@ -18,33 +18,32 @@ namespace ShootingDice
 
         public override void Play(Player other)
         {
-            // Call roll for "this" object and for the "other" object
             int myRoll = Roll();
             int otherRoll = other.Roll();
 
             Console.WriteLine($"{Name} rolls a {myRoll}");
             Console.WriteLine($"{other.Name} rolls a {otherRoll}");
 
-            if (myRoll > otherRoll)
+            try
             {
-                Console.WriteLine($"{Name} Wins!");
-            }
-            else if (myRoll < otherRoll)
-            {
-                try
+                if (myRoll > otherRoll)
                 {
-                    otherRoll = 0;
+                    Console.WriteLine($"{Name} Wins!");
                 }
-                catch (Exception)
+                else if (myRoll < otherRoll)
                 {
-                    Console.WriteLine($"{other.Name} Wins!");
-                }
+                    // *not sure this is right
+                    throw new NotImplementedException();
 
+                }
+                else
+                {
+                    Console.WriteLine("It's a tie");
+                }
             }
-            else
+            catch
             {
-                // if the rolls are equal it's a tie
-                Console.WriteLine("It's a tie");
+                Console.WriteLine("Bogie is being a sore loser!");
             }
         }
 
